@@ -32,7 +32,7 @@ return new class extends Migration
             $table->dropColumn('username');
             $table->dropColumn('first_name');
             $table->dropColumn('last_name');
-            $table->string('name'); // Re-adding 'name' column
+            $table->string('name'); // Re-adding 'name' column 
         });
     }
 };
