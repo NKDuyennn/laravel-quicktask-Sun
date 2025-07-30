@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\LanguageController;
 
 
 /*
@@ -48,6 +49,9 @@ Route::put('/users/{user}', [UserController::class, 'update'])->name('users.upda
 Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 
 Route::resource('/tasks', TaskController::class);
+
+Route::get('/locale/{lang}', [LanguageController::class, 'changeLanguage'])->name('locale');
+
 
 require __DIR__.'/auth.php';
 
